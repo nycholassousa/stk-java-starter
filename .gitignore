@@ -45,4 +45,6 @@ $RECYCLE.BIN/
 .Trash-*
 .desktop
 
+# Directories only used to test
 teste/
+test/
