@@ -13,7 +13,7 @@
 - [x] Criar snippets
 - [ ] Criar classes
 - [ ] Criar testes e casos de uso
-- [ ] Documentar completamente
+- [x] Documentar completamente
 
 ###### RDS
 - [ ] Criar plugin
