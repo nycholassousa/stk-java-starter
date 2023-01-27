@@ -29,14 +29,26 @@ inputs:
     items:
       - "11"
       - "17"
-      - "19"
 
   - label: Selecione a versao do spring boot
     type: text
     name: spring_boot_version
     items:
       - "2.7.8"
+    condition:
+      variable: jdk_version
+      operator: "=="
+      value: "11"
+
+  - label: Selecione a versao do spring boot
+    type: text
+    name: spring_boot_version
+    items:
       - "3.0.2"
+    condition:
+      variable: jdk_version
+      operator: "=="
+      value: "17"
 
 global-computed-inputs:
   builder: "maven"

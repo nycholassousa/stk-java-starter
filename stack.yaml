@@ -9,4 +9,3 @@ compatibility: # Put a list of technologies compatible with the stack
 technologies: # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/yaml/#technologies 
   - docker 
 about: docs/about.md
-usage: docs/usage.md

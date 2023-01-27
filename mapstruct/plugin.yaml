@@ -9,7 +9,7 @@ compatibility:
 about: docs/about.md
 usage: docs/usage.md
 # use-case: docs/use-case.md
-implementation: docs/implementation.md
+# implementation: docs/implementation.md
 technologies: # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/yaml/#technologies
   - "Api"
   - "Java"
