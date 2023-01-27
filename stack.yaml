@@ -6,6 +6,19 @@ category: backend # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-file
 compatibility: # Put a list of technologies compatible with the stack
   - java
   - spring
-technologies: # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/yaml/#technologies 
-  - docker 
+technologies: # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/yaml/#technologies  
+  - Api
+  - AWS DynamoDB
+  - AWS S3
+  - AWS SQS
+  - Docker
+  - Java
+  - Junit
+  - Kakfa
+  - Maven
+  - MySql
+  - PostgreSql
+  - Redis
+  - Secrets
+  - Springboot
 about: docs/about.md
