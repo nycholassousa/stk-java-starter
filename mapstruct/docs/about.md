@@ -1,1 +1,1 @@
-# About
+O mapstruct é um gerador de código que simplifica a implementação de mapeamentos, com base em uma abordagem de convenção sobre configuração. Código de mapeamento gerado usa invocações simples de método, sendo assim, torna-se seguro e fácil de entender.
