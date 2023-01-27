@@ -6,4 +6,43 @@ inputs:
   - label: Project name
     type: text
     name: project_name
+    global: true
     default: project-name
+
+  - label: Insira a descricao do projeto
+    type: text
+    name: project_description
+
+  - label: Qual o grupo do projeto?
+    pattern: "(?:^\\w+|\\w+\\.\\w+)+$"
+    type: text
+    name: group
+    global: true
+    default: com.example
+
+  - label: Selecione a versao do java
+    type: text
+    name: jdk_version
+    items:
+      - "8"
+      - "11"
+      - "17"
+      - "19"
+
+  - label: Selecione a versao do spring boot
+    type: text
+    name: spring_boot_version
+    items:
+      - "2.7.8"
+      - "3.0.2"
+
+global-computed-inputs:
+  builder: "maven"
+  language: "java"
+  path: "{{group|lower|replace('.','/')}}/{{project_name|lower|replace('-','/')}}"
+  complete_path: "src/main/{{global_computed_inputs.language}}/{{global_computed_inputs.path}}"
+
+hooks:
+  - type: runn-script
+    trigger: after-render
+    script: scripts/hexagonal.py
