@@ -1,6 +1,6 @@
 name: mapstruct
-description: Describe your plugin explaining its purpose
-display-name: mapstruct
+description: Mapeamento descomplicado sem o uso de reflections
+display-name: Mapstruct
 picture: plugin.png
 category: backend # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/plugin/#category
 compatibility:
@@ -12,20 +12,33 @@ use-case: docs/use-case.md
 implementation: docs/implementation.md
 technologies: # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/yaml/#technologies
   - "Api"
+  - "Java"
+  - "Springboot"
 types:
   - app
-inputs:
-  - label: Input Example
-    type: text
-    name: example
-    default: any text
-  - label: Example of number
-    type: int
-    name: any_number
-    default: "10"
-  - label: Example of list
-    type: multiselect
-    name: any_list
-    items:
-      - item1
-      - item2
+
+hooks:
+  - type: edit
+    trigger: after-render
+    path: app/pom.xml
+    changes:
+      - search:
+        string: "<dependencies>"
+        insert-after:
+          snippet: snippets/dependencies.txt
+        when:
+          not-exists: "<groupId>org.mapstruct</groupId>"
+      
+      - search:
+        string: "<properties>"
+        insert-after:
+          snippet: snippets/properties.txt
+        when:
+          not-exists: "<org.mapstruct.version>"
+      
+      - search:
+        string: "<plugins>"
+        insert-after:
+          snippet: snippets/plugins.txt
+        when:
+          not-exists: "<artifactId>mapstruct-processor</artifactId>"
