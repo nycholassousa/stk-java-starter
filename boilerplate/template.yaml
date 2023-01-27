@@ -12,6 +12,7 @@ inputs:
   - label: Insira a descricao do projeto
     type: text
     name: project_description
+    default: Demo project for Spring Boot
 
   - label: Qual o grupo do projeto?
     pattern: "(?:^\\w+|\\w+\\.\\w+)+$"
@@ -42,6 +43,6 @@ global-computed-inputs:
   complete_path: "src/main/{{global_computed_inputs.language}}/{{global_computed_inputs.path}}"
 
 hooks:
-  - type: runn-script
+  - type: run-script
     trigger: after-render
     script: scripts/hexagonal.py
