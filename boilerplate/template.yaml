@@ -13,6 +13,7 @@ inputs:
     type: text
     name: project_description
     default: Demo project for Spring Boot
+    help: "Descricao do projeto que fica presente no arquivo pom.xml"
 
   - label: Qual o grupo do projeto?
     pattern: "(?:^\\w+|\\w+\\.\\w+)+$"
@@ -20,6 +21,7 @@ inputs:
     name: group
     global: true
     default: com.example
+    help: "Nome do pacote base"
 
   - label: Selecione a versao do java
     type: text
