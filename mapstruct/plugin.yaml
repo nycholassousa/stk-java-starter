@@ -23,22 +23,22 @@ hooks:
     path: app/pom.xml
     changes:
       - search:
-        string: "<dependencies>"
-        insert-after:
-          snippet: snippets/dependencies.txt
-        when:
-          not-exists: "<groupId>org.mapstruct</groupId>"
+          string: "<dependencies>"
+          insert-after:
+            snippet: snippets/dependencies.txt
+          when:
+            not-exists: "<groupId>org.mapstruct</groupId>"
       
       - search:
-        string: "<properties>"
-        insert-after:
-          snippet: snippets/properties.txt
-        when:
-          not-exists: "<org.mapstruct.version>"
+          string: "<properties>"
+          insert-after:
+            snippet: snippets/properties.txt
+          when:
+            not-exists: "<org.mapstruct.version>"
       
       - search:
-        string: "<plugins>"
-        insert-after:
-          snippet: snippets/plugins.txt
-        when:
-          not-exists: "<artifactId>mapstruct-processor</artifactId>"
+          string: "<plugins>"
+          insert-after:
+            snippet: snippets/plugins.txt
+          when:
+            not-exists: "<artifactId>mapstruct-processor</artifactId>"
