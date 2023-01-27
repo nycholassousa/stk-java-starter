@@ -24,7 +24,6 @@ inputs:
     type: text
     name: jdk_version
     items:
-      - "8"
       - "11"
       - "17"
       - "19"

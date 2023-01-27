@@ -8,8 +8,8 @@ def run(metadata: Metadata = None):
     dir_language = metadata.global_computed_inputs.get("language")
     dir_base_path = metadata.global_computed_inputs.get("path")
 
-    os.makedirs(dir_base + "/app/srrc/main" + dir_language + "/" + dir_base_path + "/config")
-    os.makedirs(dir_base + "/app/srrc/main" + dir_language + "/" + dir_base_path + "/port")
-    os.makedirs(dir_base + "/app/srrc/main" + dir_language + "/" + dir_base_path + "/port/impl")
-    os.makedirs(dir_base + "/app/srrc/main" + dir_language + "/" + dir_base_path + "/usecase")
-    os.makedirs(dir_base + "/app/srrc/main" + dir_language + "/" + dir_base_path + "/usecase/impl")
+    os.makedirs(dir_base + "/app/src/main" + dir_language + "/" + dir_base_path + "/config")
+    os.makedirs(dir_base + "/app/src/main" + dir_language + "/" + dir_base_path + "/port")
+    os.makedirs(dir_base + "/app/src/main" + dir_language + "/" + dir_base_path + "/port/impl")
+    os.makedirs(dir_base + "/app/src/main" + dir_language + "/" + dir_base_path + "/usecase")
+    os.makedirs(dir_base + "/app/src/main" + dir_language + "/" + dir_base_path + "/usecase/impl")
